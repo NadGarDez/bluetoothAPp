@@ -3,13 +3,13 @@ import {createSlice} from "@reduxjs/toolkit"
 export const sessionSlice = createSlice(
   {
     name: "selectedDevice",
-    initialState:'123',
+    initialState:{},
     reducers:{
       setDeviseSelected: (state,action)=>{
-        state.token = action.payload
+        state.selectedDevice = action.payload
       },
       unsetDeviseSelected: state =>{
-        state.token = null
+        state.selectedDevice = null
       }
     }
   }
